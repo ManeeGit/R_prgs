@@ -1,0 +1,33 @@
+#Aim: 3. Develop a R script to Illustrate Matrix Operations.
+#Source Code:
+{
+m <- matrix(c(1,2,3,4,5,6),nrow=2,ncol=3)
+print(m)
+m1 <- matrix(c(1,2,3,4,5,6),nrow=2,ncol=3)
+print(m1)
+cat('\n The result of specific rows is :\n')
+print(m[c(1,2),])
+cat('\n The result of specific columns is :\n')
+print(m[,c(1,2)])
+cat('\n Adding rows and Columns into matrix : \n')
+a <- rbind(m,c(7,8,9))
+print(a)
+b <- cbind(m,c(10,11))
+print(b)
+cat('\n removing rows and Columns into matrix : \n')
+e <- m[-c(1),-c(1)]
+print(e)
+cat("\n Check element exist or not: \n")
+print(6 %in% a)
+print(15 %in% a)
+cat('\n The length of matrix is : \n ')
+c <- dim(m)
+print(c)
+print(length(m))
+d <- dim(a)
+print(d)
+print(length(a))
+cat("\n combine two matrices \n")
+f <- rbind(m,m1)
+print(f)
+}
